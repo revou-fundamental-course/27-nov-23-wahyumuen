@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .kepala {
+            background-color: rgb(78, 78, 227);
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+        }
+        .btn_style {
+         font-family: Arial, Helvetica, sans-serif;
+         background-color:blue;
+         color:white;
+         }
+         .hluas{
+            font-family: Arial, Helvetica, sans-serif;
+         }
+       </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luas Segitiga</title>
+</head>
+<body>
+    <h1 class="kepala">Luas Segitiga</h1>
+    <img src="images/rumus.jpg" width="250" height="125">
+    <br>Rumus Luas Segitiga Yaitu:
+    <br><b>L= 1/2 x a x t</b></br>
+    <br> Di mana:
+    <br> l : Luas
+    <br> a : Panjang alas
+    <br> t : Tinggi</br>
+    <br>
+    <b class="hluas"> Hitung Luas Segitiga</b>
+    <label for=""></label><br>
+    <input type="number" id="alas"><br>
+    <label for=""></label><br>
+    <input type="number" id="tinggi"><br>
+    <label for=""></label><br>
+    <button class="btn_style" id="hitung">Hitung</button>
+    <div id="output"></div>
+    <script>
+        const alas = document.getElementById('alas')
+        const tinggi = document.getElementById('tinggi')
+        const hitung = document.getElementById('hitung')
+        const output = document.getElementById('output')
+        hitung.addEventListener('click', function(){
+            let a = alas.value
+            let t = tinggi.value
+            let l = 0.5*a*t
+            output.innerHTML = `L = 1/2 x a x t<br>
+             L= 1/2 x ${a} x ${t}<br>
+             L= ${l}`
+        })
+    </script>
+    <br>
+    <br>
+    <h1 class="kepala">Keliling Segitiga</h1>
+    <img src="images/rumus.jpg" width="250" height="125">
+    <br>Rumus Keliling Segitiga Yaitu:
+    <br><b>K= S1 + S2 + S3</b></br>
+    <br> Di mana:
+    <br> K : Keliling
+    <br> S1 : Sisi A
+    <br> S2 : Sisi B
+    <br> S3 : Sisi C</br>
+    <br>
+    <b class="hluas"> Hitung Keliling Segitiga</b>
+    <label for=""></label><br>
+    <input type="number" id="k"><br>
+    <label for=""></label><br>
+    <input type="number" id="b"><br>
+    <label for=""></label><br>
+    <input type="number" id="c"><br>
+    <label for=""></label><br>
+    <button class="btn_style" id="hitung">Hitung</button>
+    <div id="output"></div>
+    <script>
+        const k = document.getElementById('k')
+        const b = document.getElementById('b')
+        const c = document.getElementById('c')
+        const hitung = document.getElementById('hitung')
+        const output = document.getElementById('output')
+        hitung.addEventListener('click', function(){
+            let s1 = k.value
+            let s2 = b.value
+            let s3 = c.value
+            let k = s1*s2*s3
+            output.innerHTML = `K = S1+S2+S3<br>
+            K=${s1} + ${s2} + ${s3}<br>
+            k : ${k}`
+        })
+    </script>
+</body>
+</html>
